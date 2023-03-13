@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
 const menuItems = [
     {
@@ -22,7 +22,7 @@ const menuItems = [
     }
 ]
 
-const socials = [
+export const socials = [
     {
         name: "Instagram",
         url: "https://www.instagram.com/ambitionconferences/",
@@ -48,13 +48,13 @@ const Navbar = () => {
             <div className="w-full h-20 px-4 mx-auto lg:flex lg:items-center shadow-xl z-[100]">
                 <div className="flex justify-between items-center">
                     <Link href="/" className="p-4">
-                        <Image src="/logo.png" alt="logo" width={100} height={120} />
+                        <Image src="/logos/black.png" alt="logo" width={100} height={120} />
                     </Link>
                 </div>
                 <div className="lg:flex flex-col lg:flex-row lg:ml-auto mt-3 lg:mt-0">
                     {menuItems.map((menuItem, i) => (
                         <Link
-                            className={`${menuItem.path === router.route ? "text-amber-300" : "text-black hover:text-amber-300"} p-2 lg:px-4 lg:mx-2 rounded duration-150 transition-colors`}
+                            className={`${menuItem.path === router.route ? "text-blue-500" : "text-black hover:text-blue-500"} p-2 lg:px-4 lg:mx-2 rounded duration-150 transition-colors`}
                             href={menuItem.path}
                             key={i}
                         >

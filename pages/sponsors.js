@@ -1,5 +1,12 @@
+import Layout from "@/components/layout";
+
 export default function Sponsors() {
     return (
-        <>Sponsors</>
+        <Layout
+            pageTitle="Sponsors"
+            description="Sponsors Page"
+        >
+            Sponsors
+        </Layout>
     )
 }
