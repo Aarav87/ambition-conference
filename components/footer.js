@@ -21,20 +21,20 @@ export const socials = [
 
 export default function Footer() {
     return (
-        <div className="flex bg-blue-900 flex-col items-center gap-4 p-8 py-16 fixed inset-x-0 bottom-0">
-            <Image src="/logos/white.png" alt="Logo" width={150} height={50} objectFit="contain" objectPosition="center" />
-            <div className="pt-2 flex gap-6 pb-3">
+        <div className="flex bg-blue-900 flex-col gap-4 p-8 py-16 items-center">
+            <Image src="/logos/white.png" alt="Logo" width={150} height={50} />
+            <div className="pt-2 gap-6 flex pb-3">
                 {socials.map((social, i) => (
                     <a href={social.url} key={i}>
                         <Image src={social.img} alt={social.name} width={40} height={40} />
                     </a>
                 ))}
             </div>
-            <p className="text-md text-white text-xl">
+            <p className="lg:text-xl text-md text-white">
                 Made by
                 {" "}
                 <a
-                    className="text-blue-200 hover:text-amber-300 transition-all duration-150 underline"
+                    className="underline text-blue-200 transition-all hover:text-amber-300 duration-100"
                     href="https://github.com/Aarav87"
                 >
                     Aarav Chhabra

@@ -6,7 +6,7 @@ export default function Layout({ children, pageTitle, description }) {
     const title = `Ambition Conferences | ${pageTitle}`
 
     return (
-        <>
+        <div className="flex flex-col min-h-screen overflow-x-hidden">
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={description} />
@@ -16,6 +16,6 @@ export default function Layout({ children, pageTitle, description }) {
             <Navbar />
             <main>{children}</main>
             <Footer />
-        </>
+        </div>
     )
 }
