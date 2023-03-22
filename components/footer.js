@@ -21,7 +21,7 @@ export const socials = [
 
 export default function Footer() {
     return (
-        <div className="flex bg-blue-900 flex-col gap-4 p-8 py-16 items-center">
+        <div className="flex bg-dark-periwinkle flex-col gap-4 p-8 py-16 items-center">
             <Image src="/logos/white.png" alt="Logo" width={150} height={50} />
             <div className="pt-2 gap-6 flex pb-3">
                 {socials.map((social, i) => (
