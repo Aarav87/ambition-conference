@@ -2,8 +2,9 @@ import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-export default function Layout({ children, pageTitle, description }) {
+export default function Layout({ children, pageTitle }) {
     const title = `Ambition Conferences | ${pageTitle}`
+    const description = 'Ambition Conferences is ...'
 
     return (
         <div className="flex flex-col min-h-screen overflow-x-hidden">

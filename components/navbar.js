@@ -4,11 +4,16 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { GoThreeBars } from "react-icons/go";
+import Logo from "@/public/logos/black.png";
 
 const menuItems = [
     {
         name: "Home",
         path: "/"
+    },
+    {
+        name: "Event Details",
+        path: "/event-details"
     },
     {
         name: "Team",
@@ -37,7 +42,7 @@ export const socials = [
     },
     {
         name: "Email",
-        url: "",
+        url: "mailto:ambitionconferences@gmail.com",
         img: "/socials/email.png"
     }
 ]
@@ -51,7 +56,7 @@ export default function Navbar() {
             <div className="w-full mx-auto lg:flex py-2 px-4 lg:items-center shadow-xl z-[100]">
                 <div className="flex justify-between items-center">
                     <Link href="/" className="p-4">
-                        <Image src="/logos/black.png" alt="logo" width={120} height={120} />
+                        <Image src={Logo} alt="logo" width={120} height={120} />
                     </Link>
 
                     <button
