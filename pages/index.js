@@ -4,8 +4,11 @@ import Image from "next/image";
 import HomeHero from "@/public/heroBanner/home.jpg";
 import Logo from "@/public/logos/white.png";
 import Link from "next/link";
+import {Client} from "@notionhq/client";
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const notion = new Client ({ auth: process.env.NOTION_API_KEY });
 
 export default function Home() {
   return (

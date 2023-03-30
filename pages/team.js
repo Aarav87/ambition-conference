@@ -1,8 +1,7 @@
 import Layout from "@/components/layout";
-import { Client } from "@notionhq/client";
 import Image from "next/image";
 import TeamHero from "@/public/heroBanner/team.jpg";
-import {useEffect} from "react";
+import { notion } from "@/pages/index";
 
 export default function TeamPage({ coHeads, teams }) {
     return (
@@ -40,6 +39,8 @@ export default function TeamPage({ coHeads, teams }) {
                             height={500}
                             width={500}
                             className="object-cover mx-auto"
+                            placeholder="blur"
+                            blurDataURL={coHead.blurDataURL}
                         />
                         <h1 className="text-3xl text-gray-800 mt-4 text-center">{coHead.name}</h1>
                     </a>
@@ -60,6 +61,8 @@ export default function TeamPage({ coHeads, teams }) {
                             height={700}
                             width={700}
                             className="object-fill mx-auto"
+                            placeholder="blur"
+                            blurDataURL={team.blurDataURL}
                         />
                         <h1 className="text-3xl text-gray-800 mt-4 text-center pt-3 pb-5">{team.name}</h1>
                     </a>
@@ -70,9 +73,8 @@ export default function TeamPage({ coHeads, teams }) {
 }
 
 export async function getStaticProps() {
-    const notion = new Client ({ auth: process.env.NOTION_API_KEY });
     const response = await notion.databases.query({
-        database_id: process.env.TEAM_DATABASE_ID
+        database_id: process.env.TEAM_DB_ID
     });
 
     const coHeads = [];
@@ -81,12 +83,14 @@ export async function getStaticProps() {
         if (result.properties.Tags.multi_select[0].name === "Co-Head") {
             coHeads.push({
                 name: result.properties.Name.title[0].text.content,
-                img: result.properties.img.files[0].file.url
+                img: result.properties.img.files[0].file.url,
+                blurDataURL: result.properties.blurDataURL.rich_text[0].plain_text
             });
         } else {
             teams.push({
                 name: result.properties.Name.title[0].text.content,
-                img: result.properties.img.files[0].file.url
+                img: result.properties.img.files[0].file.url,
+                blurDataURL: result.properties.blurDataURL.rich_text[0].plain_text
             });
         }
     });
