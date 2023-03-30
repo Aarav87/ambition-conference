@@ -3,8 +3,10 @@ import Layout from "@/components/layout";
 import Image from "next/image";
 import HomeHero from "@/public/heroBanner/home.jpg";
 import Logo from "@/public/logos/white.png";
+import Students from "@/public/students.jpg";
+import GuestSpeaker from "@/public/guestSpeaker.jpg";
 import Link from "next/link";
-import {Client} from "@notionhq/client";
+import { Client } from "@notionhq/client";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -36,15 +38,66 @@ export default function Home() {
                             We provide students with opportunities to learn about business from industry leaders.
                       </h2>
 
-                      <Link href="/event-details">
-                          <button className='bg-dark-periwinkle hover:bg-blue-900 px-4 py-3 font-medium text-2xl rounded-md mt-10'>
-                              Event Details
-                          </button>
-                      </Link>
-
+                      <div>
+                          <Link href="https://docs.google.com/forms/d/e/1FAIpQLScMf1mo16Z6W1-JXVMc24-AYNK1qzQPc4OmKZhCQXSCrlgEAQ/viewform" className="pr-2">
+                              <button className='bg-dark-periwinkle hover:bg-blue-900 px-4 py-3 font-medium text-2xl rounded-md mt-10 object-right'>
+                                  Register Now
+                              </button>
+                          </Link>
+                          <Link href="/event-details" className="pl-2">
+                              <button className='bg-dark-periwinkle hover:bg-blue-900 px-4 py-3 font-medium text-2xl rounded-md mt-10 object-left'>
+                                  Event Details
+                              </button>
+                          </Link>
+                      </div>
                   </div>
               </div>
           </header>
+
+          <div className="flex p-10 flex-col items-center lg:flex-row lg:p-20 xl:p-40 lg:items-left bg-gray-50">
+              <div className="flex flex-col items-center lg:items-start w-4/5 text-center lg:text-left mb-4 lg:mb-0">
+                  <h1 className="text-5xl text-black font-bold">Preparing future business leaders.</h1>
+
+                  <p className="text-2xl text-gray-600 font-light mt-2 w-3/4 pt-3 pb-5">
+                      Ambition Conference provides students the opportunity to build a network while developing business fundamentals.
+                      Through guest speakers and workshops, we develop necessary skills with an innovative and exciting approach.
+                  </p>
+
+                  <div className='my-4'>
+                      <Link href="/event-details">
+                          <button className='px-6 py-3 border-dark-periwinkle text-dark-periwinkle border rounded-lg font-medium text-lg'>
+                              Event details
+                          </button>
+                      </Link>
+                  </div>
+              </div>
+
+              <div className="flex-col w-3/4">
+                  <Image className="filter duration-75 rounded-lg object-cover object-center" src={GuestSpeaker} alt="Team of Students" quality={100} placeholder="blur" />
+              </div>
+          </div>
+
+          <div className="flex p-10 flex-col items-center lg:flex-row-reverse lg:p-20 xl:p-40 lg:items-center justify-between bg-white">
+              <div className="flex flex-col items-center lg:items-end w-4/5 text-center lg:text-right mb-4 lg:mb-0 lg:ml-16">
+                  <h1 className="text-5xl text-black font-bold">Hosted for students, by students.</h1>
+
+                  <p className="text-2xl text-gray-600 font-light mt-2 w-3/4 pt-3 pb-5">
+                      Ambition Conference is a student-led initiative that aims to inspire and prepare youth for the post-secondary business world.
+                  </p>
+
+                  <div className='my-4'>
+                      <Link href="/team">
+                          <button className='px-6 py-3 border-sky-700 text-sky-700 border rounded-lg font-medium text-lg'>
+                              Meet the Team
+                          </button>
+                      </Link>
+                  </div>
+              </div>
+
+              <div className="flex-col w-3/4">
+                  <Image className="object-cover object-center filter duration-75 rounded-lg" src={Students} alt="Team of Students" quality={100} />
+              </div>
+          </div>
       </Layout>
   )
 }

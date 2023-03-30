@@ -13,7 +13,7 @@ export default function Sponsors({ sponsors }) {
                     placeholder="blur"
                     alt="Hero Image"
                     layout="fill"
-                    className="saturate-150 object-cover object-top"
+                    className="saturate-150 object-cover object-center"
                     quality={100}
                 />
 
