@@ -20,7 +20,7 @@ jobs:
           echo SPONSORS_DB_ID=${{ secrets.SPONSORS_DB_ID }} >> .env.local
           echo TEAM_DB_ID=${{ secrets.TEAM_DB_ID }} >> .env.local
       - name: Build
-          run: npm run build
+        run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
