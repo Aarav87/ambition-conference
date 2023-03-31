@@ -11,11 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: npm ci && npm run build
-        env:
-          NOTION_API_KEY: '${{ secrets.NOTION_API_KEY }}'
-          SPONSORS_DB_ID: '${{ secrets.SPONSORS_DB_ID }}'
-          TEAM_DB_ID: '${{ secrets.TEAM_DB_ID }}'
+      - run:
+        touch .env.local
+        echo NOTION_API_KEY=${{ secrets.NOTION_API_KEY }} >> .env.local
+        echo SPONSORS_DB_ID=${{ secrets.SPONSORS_DB_ID }} >> .env.local
+        echo TEAM_DB_ID=${{ secrets.TEAM_DB_ID }} >> .env.local
+        
+        npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
