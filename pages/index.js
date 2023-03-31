@@ -1,9 +1,5 @@
 import { Inter } from 'next/font/google'
 import Layout from "@/components/layout";
-import HomeHero from "@/public/heroBanner/home.jpg";
-import Logo from "@/public/logos/white.png";
-import Students from "@/public/students.jpg";
-import GuestSpeaker from "@/public/guestSpeaker.jpg";
 import Link from "next/link";
 import { Client } from "@notionhq/client";
 import Image from "next/image";
@@ -17,8 +13,7 @@ export default function Home() {
       <Layout pageTitle="Home">
           <header className="h-screen relative">
               <Image
-                src={HomeHero}
-                placeholder="blur"
+                src="/heroBanner/home.jpg"
                 layout="fill"
                 className="object-center object-cover"
                 alt="Hero Image"
@@ -28,7 +23,7 @@ export default function Home() {
 
               <div className="relative z-1 h-screen flex items-center justify-center">
                   <div className="text-center mx-auto text-white">
-                      <Image src={Logo} width={400} height={100} className="mx-auto" quality={100} alt="Logo" />
+                      <Image src="/logos/white.png" width={400} height={100} className="mx-auto" quality={100} alt="Logo" />
 
                       <h1 className="font-bold mt-4 text-3xl xs:text-5xl md:text-7xl">
                           Ambition Conferences
@@ -73,7 +68,7 @@ export default function Home() {
               </div>
 
               <div className="flex-col w-3/4">
-                  <Image className="filter duration-75 rounded-lg object-cover object-center" src={GuestSpeaker} alt="Team of Students" quality={100} placeholder="blur" />
+                  <Image width={700} height={700} className="filter duration-75 rounded-lg object-cover object-center" src="/guestSpeaker.jpg" alt="Team of Students" quality={100} />
               </div>
           </div>
 
@@ -95,7 +90,7 @@ export default function Home() {
               </div>
 
               <div className="flex-col w-3/4">
-                  <Image className="object-cover object-center filter duration-75 rounded-lg" src={Students} alt="Team of Students" quality={100} />
+                  <Image width={700} height={700} className="object-cover object-center filter duration-75 rounded-lg" src="/students.jpg" alt="Team of Students" quality={100} />
               </div>
           </div>
       </Layout>

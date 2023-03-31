@@ -1,5 +1,4 @@
 import Layout from "@/components/layout";
-import SponsorsHero from "@/public/heroBanner/sponsors.jpg";
 import {notion} from "@/pages/index";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,8 +8,7 @@ export default function Sponsors({ sponsors }) {
         <Layout pageTitle="Sponsors">
             <header className="h-[40vh] lg:h-[44vh] relative">
                 <Image
-                    src={SponsorsHero}
-                    placeholder="blur"
+                    src="/heroBanner/sponsors.jpg"
                     alt="Hero Image"
                     layout="fill"
                     className="saturate-150 object-cover object-center"

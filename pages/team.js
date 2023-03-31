@@ -1,5 +1,4 @@
 import Layout from "@/components/layout";
-import TeamHero from "@/public/heroBanner/team.jpg";
 import { notion } from "@/pages/index";
 import Image from "next/image";
 
@@ -8,8 +7,7 @@ export default function TeamPage({ coHeads, teams }) {
         <Layout pageTitle="Team">
             <header className="h-[40vh] lg:h-[44vh] relative">
                 <Image
-                    src={TeamHero}
-                    placeholder="blur"
+                    src="/heroBanner/team.jpg"
                     alt="Hero Image"
                     layout="fill"
                     className="saturate-150 object-cover object-top"

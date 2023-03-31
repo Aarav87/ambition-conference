@@ -1,5 +1,4 @@
 import Layout from "@/components/layout";
-import EventDetailsHero from "@/public/heroBanner/event-details.jpg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,8 +7,7 @@ export default function EventDetails() {
         <Layout pageTitle="Event Details">
             <header className="h-[40vh] lg:h-[44vh] relative">
                 <Image
-                    src={EventDetailsHero}
-                    placeholder="blur"
+                    src="/heroBanner/event-details.jpg"
                     alt="Hero Image"
                     layout="fill"
                     className="saturate-150 object-cover object-top"
