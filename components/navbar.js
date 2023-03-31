@@ -23,10 +23,10 @@ const menuItems = [
         name: "Sponsors",
         path: "/sponsors"
     },
-    {
-        name: "Past Events",
-        path: "/past-events"
-    }
+    // {
+    //     name: "Past Events",
+    //     path: "/past-events"
+    // }
 ]
 
 export const socials = [
