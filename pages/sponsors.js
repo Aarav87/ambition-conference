@@ -1,5 +1,5 @@
 import Layout from "@/components/layout";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import SponsorsHero from "@/public/heroBanner/sponsors.jpg";
 import {notion} from "@/pages/index";
 import Link from "next/link";
@@ -8,7 +8,7 @@ export default function Sponsors({ sponsors }) {
     return (
         <Layout pageTitle="Sponsors">
             <header className="h-[40vh] lg:h-[44vh] relative">
-                <Image
+                <ExportedImage
                     src={SponsorsHero}
                     placeholder="blur"
                     alt="Hero Image"
@@ -29,7 +29,7 @@ export default function Sponsors({ sponsors }) {
             <div className="mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-16 md:p-24 lg:p-30 pt-20 gap-10">
                 {sponsors.map((sponsor) => (
                     <Link key={sponsor.name} href={sponsor.website}>
-                        <Image
+                        <ExportedImage
                             src={sponsor.logo}
                             alt={sponsor.name}
                             quality={100}

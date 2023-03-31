@@ -1,5 +1,5 @@
 import Layout from "@/components/layout";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import TeamHero from "@/public/heroBanner/team.jpg";
 import { notion } from "@/pages/index";
 
@@ -7,7 +7,7 @@ export default function TeamPage({ coHeads, teams }) {
     return (
         <Layout pageTitle="Team">
             <header className="h-[40vh] lg:h-[44vh] relative">
-                <Image
+                <ExportedImage
                     src={TeamHero}
                     placeholder="blur"
                     alt="Hero Image"
@@ -32,7 +32,7 @@ export default function TeamPage({ coHeads, teams }) {
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-16 md:p-24 lg:p-30 pt-0 md:pt-0 lg:pt-0 gap-10">
                 {coHeads.map((coHead) => (
                     <a key={coHead.name}>
-                        <Image
+                        <ExportedImage
                             src={coHead.img}
                             alt={coHead.name}
                             quality={100}
@@ -54,7 +54,7 @@ export default function TeamPage({ coHeads, teams }) {
             <div className="mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 p-16 md:p-20 lg:p-30 pt-0 md:pt-0 lg:pt-0 gap-2 md:gap-10">
                 {teams.map((team) => (
                     <a key={team.name}>
-                        <Image
+                        <ExportedImage
                             src={team.img}
                             alt={team.name}
                             quality={100}
