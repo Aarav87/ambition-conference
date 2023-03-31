@@ -1,13 +1,13 @@
 import Layout from "@/components/layout";
-import ExportedImage from "next-image-export-optimizer";
 import EventDetailsHero from "@/public/heroBanner/event-details.jpg";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function EventDetails() {
     return (
         <Layout pageTitle="Event Details">
             <header className="h-[40vh] lg:h-[44vh] relative">
-                <ExportedImage
+                <Image
                     src={EventDetailsHero}
                     placeholder="blur"
                     alt="Hero Image"

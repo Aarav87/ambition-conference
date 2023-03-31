@@ -1,12 +1,12 @@
 import { Inter } from 'next/font/google'
 import Layout from "@/components/layout";
-import ExportedImage from "next-image-export-optimizer";
 import HomeHero from "@/public/heroBanner/home.jpg";
 import Logo from "@/public/logos/white.png";
 import Students from "@/public/students.jpg";
 import GuestSpeaker from "@/public/guestSpeaker.jpg";
 import Link from "next/link";
 import { Client } from "@notionhq/client";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +16,7 @@ export default function Home() {
   return (
       <Layout pageTitle="Home">
           <header className="h-screen relative">
-              <ExportedImage
+              <Image
                 src={HomeHero}
                 placeholder="blur"
                 layout="fill"
@@ -28,7 +28,7 @@ export default function Home() {
 
               <div className="relative z-1 h-screen flex items-center justify-center">
                   <div className="text-center mx-auto text-white">
-                      <ExportedImage src={Logo} width={400} height={100} className="mx-auto" quality={100} alt="Logo" />
+                      <Image src={Logo} width={400} height={100} className="mx-auto" quality={100} alt="Logo" />
 
                       <h1 className="font-bold mt-4 text-3xl xs:text-5xl md:text-7xl">
                           Ambition Conferences
@@ -73,7 +73,7 @@ export default function Home() {
               </div>
 
               <div className="flex-col w-3/4">
-                  <ExportedImage className="filter duration-75 rounded-lg object-cover object-center" src={GuestSpeaker} alt="Team of Students" quality={100} placeholder="blur" />
+                  <Image className="filter duration-75 rounded-lg object-cover object-center" src={GuestSpeaker} alt="Team of Students" quality={100} placeholder="blur" />
               </div>
           </div>
 
@@ -95,7 +95,7 @@ export default function Home() {
               </div>
 
               <div className="flex-col w-3/4">
-                  <ExportedImage className="object-cover object-center filter duration-75 rounded-lg" src={Students} alt="Team of Students" quality={100} />
+                  <Image className="object-cover object-center filter duration-75 rounded-lg" src={Students} alt="Team of Students" quality={100} />
               </div>
           </div>
       </Layout>
