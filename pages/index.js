@@ -68,7 +68,7 @@ export default function Home() {
               </div>
 
               <div className="flex-col w-3/4">
-                  <Image width={700} height={700} className="filter duration-75 rounded-lg object-cover object-center" src="/guestSpeaker.jpg" alt="Team of Students" quality={100} />
+                  <Image width={700} height={700} className="filter duration-75 rounded-lg object-cover object-center" src="/guestSpeaker.JPG" alt="Team of Students" quality={100} />
               </div>
           </div>
 
@@ -90,7 +90,7 @@ export default function Home() {
               </div>
 
               <div className="flex-col w-3/4">
-                  <Image width={700} height={700} className="object-cover object-center filter duration-75 rounded-lg" src="/students.jpg" alt="Team of Students" quality={100} />
+                  <Image width={700} height={700} className="object-cover object-center filter duration-75 rounded-lg" src="/students.JPG" alt="Team of Students" quality={100} />
               </div>
           </div>
       </Layout>
