@@ -9,16 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Make envfile
-        uses: SpicyPizza/create-envfile@v1.3
-        with:
-          envkey_NOTION_API_KEY: '${{ secrets.NOTION_API_KEY }}'
-          envkey_SPONSORS_DB_ID: '${{ secrets.SPONSORS_DB_ID }}'
-          envkey_TEAM_DB_ID: '${{ secrets.TEAM_DB_ID }}'
-          directory: ../ambition-conference
-          file_name: .env.local
       - name: Build the Project
         run: |
+          touch .env.local
+          echo NOTION_API_KEY="${{ secrets.NOTION_API_KEY }}" >> .env.local
+          echo SPONSORS_DB_ID="${{ secrets.SPONSORS_DB_ID }}" >> .env.local
+          echo TEAM_DB_ID="${{ secrets.TEAM_DB_ID }}" >> .env.local
           npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
