@@ -81,13 +81,13 @@ export async function getStaticProps() {
         if (result.properties.Tags.multi_select[0].name === "Co-Head") {
             coHeads.push({
                 name: result.properties.Name.title[0].text.content,
-                img: result.properties.img.files[0].file.url,
+                img: result.properties.img.url,
                 blurDataURL: result.properties.blurDataURL.rich_text[0].plain_text
             });
         } else {
             teams.push({
                 name: result.properties.Name.title[0].text.content,
-                img: result.properties.img.files[0].file.url,
+                img: result.properties.img.url,
                 blurDataURL: result.properties.blurDataURL.rich_text[0].plain_text
             });
         }

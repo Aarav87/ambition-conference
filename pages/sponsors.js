@@ -51,7 +51,7 @@ export async function getStaticProps() {
     response.results.forEach((result) => {
         sponsorsList.push({
             name: result.properties.Name.title[0].text.content,
-            logo: result.properties.Logo.files[0].file.url,
+            logo: result.properties.Logo.url,
             website: result.properties.Website.rich_text[0].href
         })
     })
