@@ -12,15 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build the Project
-        run: |
-          touch .env.local
-          echo NOTION_API_KEY=${{ secrets.NOTION_API_KEY }} >> .env.local
-          echo SPONSORS_DB_ID=${{ secrets.SPONSORS_DB_ID }} >> .env.local
-          echo TEAM_DB_ID=${{ secrets.TEAM_DB_ID }} >> .env.local
-          npm ci && npm run build
+        run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_AMBITION_CONFERENCES }}'
           channelId: live
           projectId: ambition-conferences
+          envkey_NOTION_API_KEY: '${{ secrets.NOTION_API_KEY }}'
+          envkey_SPONSORS_DB_ID: '${{ secrets.SPONSORS_DB_ID }}'
+          envkey_TEAM_DB_ID: '${{ secrets.TEAM_DB_ID }}'
+          file_name: .env.local
