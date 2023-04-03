@@ -10,7 +10,7 @@ export default function EventDetails() {
                     src="/heroBanner/event-details.jpg"
                     alt="Hero Image"
                     layout="fill"
-                    className="saturate-150 object-cover object-top"
+                    className="saturate-150 object-cover object-center"
                     quality={100}
                 />
 
@@ -23,13 +23,13 @@ export default function EventDetails() {
                 </div>
             </header>
 
-            <div className="flex p-10 flex-col items-center lg:flex-row lg:p-20 xl:p-40 lg:py-10 xl:py-20 lg:items-left bg-gray-50">
+            <div className="flex p-10 flex-col items-center lg:flex-row lg:p-20 xl:p-40 lg:items-left bg-gray-50">
                 <div className="flex flex-col items-center lg:items-start w-4/5 text-center lg:text-left mb-4 lg:mb-0">
-                    <h1 className="text-5xl text-black font-bold">Location</h1>
+                    <h1 className="text-5xl text-black font-bold">Location & Timing</h1>
 
-                    <p className="text-2xl text-gray-600 font-light mt-2 w-3/4 pt-3 pb-5">
+                    <p className="text-xl text-gray-600 font-light mt-2 w-3/4 pt-3 pb-5">
                         The 2023 Ambition Conference will take place at St. Francis Xavier Secondary School, in Mississauga, Ontario
-                        on Monday, April 3rd, 2023 from 6-9pm.
+                        on Monday, April 3rd, from 6-9pm.
                     </p>
 
                     <div className='my-4'>

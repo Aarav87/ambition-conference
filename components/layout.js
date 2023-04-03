@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { motion } from "framer-motion";
 
 export default function Layout({ children, pageTitle }) {
     const title = `Ambition Conferences | ${pageTitle}`
@@ -15,7 +16,18 @@ export default function Layout({ children, pageTitle }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Navbar />
-            <main>{children}</main>
+            <motion.div
+                initial={{ x: 300, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 300, opacity: 0 }}
+                transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20
+                }}
+            >
+                {children}
+            </motion.div>
             <Footer />
         </div>
     )

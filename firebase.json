@@ -5,6 +5,19 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "rewrites": [
+      {
+        "source": "/team",
+        "destination": "/team.html"
+      },
+      {
+        "source": "/event-details",
+        "destination": "/event-details.html"
+      },
+      {
+        "source": "/sponsors",
+        "destination": "/sponsors.html"
+      }]
   }
 }

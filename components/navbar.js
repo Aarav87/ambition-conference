@@ -52,11 +52,11 @@ export default function Navbar() {
     const [showDropdown, setShowDropdown] = useState(false);
 
     return (
-        <header className="bg-white sticky lg:text-xl">
+        <header className="bg-white sticky lg:text-lg">
             <div className="w-full mx-auto lg:flex py-2 px-4 lg:items-center shadow-xl z-[100]">
                 <div className="flex justify-between items-center">
                     <Link href="/" className="p-4">
-                        <Image src={Logo} alt="logo" width={120} height={120} />
+                        <Image src={Logo} alt="logo" width={110} height={110} />
                     </Link>
 
                     <button

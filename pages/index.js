@@ -35,12 +35,12 @@ export default function Home() {
 
                       <div>
                           <Link href="https://docs.google.com/forms/d/e/1FAIpQLScMf1mo16Z6W1-JXVMc24-AYNK1qzQPc4OmKZhCQXSCrlgEAQ/viewform" className="pr-2">
-                              <button className='bg-dark-periwinkle hover:bg-blue-900 px-4 py-3 font-medium text-2xl rounded-md mt-10 object-right'>
+                              <button className='bg-dark-periwinkle hover:bg-blue-900 px-4 py-3 font-medium text-2xl sm:text-lg rounded-md mt-10 object-right'>
                                   Register Now
                               </button>
                           </Link>
                           <Link href="/event-details" className="pl-2">
-                              <button className='bg-dark-periwinkle hover:bg-blue-900 px-4 py-3 font-medium text-2xl rounded-md mt-10 object-left'>
+                              <button className='bg-dark-periwinkle hover:bg-blue-900 px-4 py-3 font-medium text-2xl sm:text-lg rounded-md mt-10 object-left'>
                                   Event Details
                               </button>
                           </Link>
@@ -53,7 +53,7 @@ export default function Home() {
               <div className="flex flex-col items-center lg:items-start w-4/5 text-center lg:text-left mb-4 lg:mb-0">
                   <h1 className="text-5xl text-black font-bold">Preparing future business leaders.</h1>
 
-                  <p className="text-2xl text-gray-600 font-light mt-2 w-3/4 pt-3 pb-5">
+                  <p className="text-xl text-gray-600 font-light mt-2 w-3/4 pt-3 pb-5">
                       Ambition Conference provides students the opportunity to build a network while developing business fundamentals.
                       Through guest speakers and workshops, we develop necessary skills with an innovative and exciting approach.
                   </p>
@@ -76,7 +76,7 @@ export default function Home() {
               <div className="flex flex-col items-center lg:items-end w-4/5 text-center lg:text-right mb-4 lg:mb-0 lg:ml-16">
                   <h1 className="text-5xl text-black font-bold">Hosted for students, by students.</h1>
 
-                  <p className="text-2xl text-gray-600 font-light mt-2 w-3/4 pt-3 pb-5">
+                  <p className="text-xl text-gray-600 font-light mt-2 w-3/4 pt-3 pb-5">
                       Ambition Conference is a student-led initiative that aims to inspire and prepare youth for the post-secondary business world.
                   </p>
 
