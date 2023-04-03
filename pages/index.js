@@ -82,7 +82,7 @@ export default function Home() {
 
                   <div className='my-4'>
                       <Link href="/team">
-                          <button className='px-6 py-3 border-sky-700 text-sky-700 border rounded-lg font-medium text-lg'>
+                          <button className='px-6 py-3 border-dark-periwinkle text-dark-periwinkle border rounded-lg font-medium text-lg'>
                               Meet the Team
                           </button>
                       </Link>
