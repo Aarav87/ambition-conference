@@ -34,11 +34,6 @@ export default function Home() {
                       </h2>
 
                       <div>
-                          <Link href="https://docs.google.com/forms/d/e/1FAIpQLScMf1mo16Z6W1-JXVMc24-AYNK1qzQPc4OmKZhCQXSCrlgEAQ/viewform" className="pr-2">
-                              <button className='bg-dark-periwinkle hover:bg-blue-900 px-4 py-3 font-medium text-2xl sm:text-lg rounded-md mt-10 object-right'>
-                                  Register Now
-                              </button>
-                          </Link>
                           <Link href="/event-details" className="pl-2">
                               <button className='bg-dark-periwinkle hover:bg-blue-900 px-4 py-3 font-medium text-2xl sm:text-lg rounded-md mt-10 object-left'>
                                   Event Details

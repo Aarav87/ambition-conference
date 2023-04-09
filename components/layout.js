@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Layout({ children, pageTitle }) {
     const title = `Ambition Conferences | ${pageTitle}`
-    const description = 'Ambition Conferences is ...'
+    const description = 'Ambition Conferences is a business event that strives to teach youth about the basics of business and finance through guest speakers, workshops, and networking opportunities.'
 
     return (
         <div className="flex flex-col min-h-screen overflow-x-hidden">
